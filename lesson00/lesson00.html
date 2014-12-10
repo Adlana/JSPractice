@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script language="JavaScript">
+        var publicVariable = 1;
+
+        var privateVariable_ = 2;
+
+        var CONST_1 = 3;
+
+        function f1(){
+            function s2(){
+                publicVariable = 4;
+                console.log(publicVariable);
+            }
+            s2();
+        }
+
+        var f2 = function(){
+            console.log('♥');
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
