@@ -4,7 +4,40 @@
     <meta charset="UTF-8">
     <title></title>
     <script language="JavaScript">
-        
+        var emptyObj = {};
+        var emptyArr = [];
+        var emptyArrayLength5 = new Array(5);
+        function emptyFunc(){
+
+        }
+
+        /**
+         * Function with single argument.
+         * @param {string} arg0 - Argument description.
+         */
+        function oneArg(arg0){
+            console.log(arg0);
+        }
+
+        /**
+         * Private function with optional argument.
+         * @param {*=} opt_arg0 - Optional argument.
+         * @return {boolean} - Returns true if incoming argument is defined.
+         * @private
+         */
+        function privateOptionalArg_(opt_arg0){
+            console.log(opt_arg0);
+            return opt_arg0 !== undefined;
+        }
+
+        /**
+         * Function with undefined number of arguments.
+         * @param {...(number|boolean)} var_args - Expected arguments.
+         */
+        function undefinedNumberOfArguments(var_args){
+            console.log(arguments.length);
+        }
+
     </script>
 </head>
 <body>
