@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script language="javascript">
+
+        /**
+         * Creates instance of Animal.
+         * @param {string=} opt_name - Name.
+         * @constructor
+         */
+        var Animal = function(opt_name) {
+            if (opt_name !== undefined) {
+                this.name = opt_name;
+            }
+        };
+
+        /**
+         * Name field.
+         * @type {string}
+         */
+        Animal.prototype.name = 'Sasha';
+
+        /**
+         * Says its name.
+         */
+        Animal.prototype.sayName = function() {
+            console.log(this.name);
+        };
+
+        function load() {
+            var dog = new Animal();
+            var cat = new Animal('Jes');
+
+            dog.sayName();
+            cat.sayName();
+        }
+
+
+    </script>
+</head>
+<body onload="load()">
+
+</body>
+</html>
