@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Basic operations, conversion</title>
+    <script language="javascript">
+
+        var a = 5, b = 4;
+        var addition = a + b; //addition
+        var subtraction = a - b; //subtraction
+        var multiplication = a * b; //multiplication
+        var division = a / b; //division
+
+        //Эта фигня написана, чтобы понять порядок вычислений.
+        var complexDivision = ((a + multiplication) + b * subtraction) / (a * addition + subtraction / addition);
+
+        /*
+                (v1 + v2) + v3*v4
+         a =  -----------------------
+                v7
+                   v5 * v6 +   ------
+         v8
+         */
+
+        //comparison
+        var c = 5, d = 4;
+        var equals = (a == c); //true
+        var notEquals = (a != b); //true
+        var moreThan = (a > b); //true
+        var lessThan = (b < a); //true
+        var moreOrEquals1 = (a >= b); //true
+        var moreOrEquals2 = (a >= c); //true
+        var lessOrEquals1 = (b <= a); //true
+        var lessOrEquals2 = (b <= d); //true
+
+       /*
+       Будет иметь значение false. Оператор "и" имеет значение "истина", когда оба выражения имеют значение "истина".
+        */
+        var andCondition = (true && true && true && false);
+
+        /*
+        Будет иметь значение true. Оператор "или" имеет значение "истина", когда хотя бы одно значение "истина".
+         */
+        var orCondition = (false || false || true || false);
+
+        //ToDo Почитать про таблицы истинности.
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //Конвертации типов
+        
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
