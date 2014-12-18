@@ -15,11 +15,11 @@
         var complexDivision = ((a + multiplication) + b * subtraction) / (a * addition + subtraction / addition);
 
         /*
-                (v1 + v2) + v3*v4
+         (v1 + v2) + v3*v4
          a =  -----------------------
-                              v7
-                v5 * v6 +   ------
-                              v8
+         v7
+         v5 * v6 +   ------
+         v8
          */
 
         //comparison
@@ -33,13 +33,13 @@
         var lessOrEquals1 = (b <= a); //true
         var lessOrEquals2 = (b <= d); //true
 
-       /*
-       Будет иметь значение false. Оператор "и" имеет значение "истина", когда оба выражения имеют значение "истина".
-        */
+        /*
+         Будет иметь значение false. Оператор "и" имеет значение "истина", когда оба выражения имеют значение "истина".
+         */
         var andCondition = (true && true && true && false);
 
         /*
-        Будет иметь значение true. Оператор "или" имеет значение "истина", когда хотя бы одно значение "истина".
+         Будет иметь значение true. Оператор "или" имеет значение "истина", когда хотя бы одно значение "истина".
          */
         var orCondition = (false || false || true || false);
 
@@ -50,31 +50,75 @@
         //Конвертации типов
 
         /*
-        Конвертация в boolean
-        Любые boolean операции превращают в boolean.
+         Конвертация в boolean
+         Любые boolean операции превращают в boolean.
          ! = & | > < и т.д.
          */
-        var bool1 = (1==2); //false
+        var bool1 = (1 == 2); //false
 
         /*
-        Как false интерпретируются значения:
-        0, null, false, undefined (void 0), '' (пустая строка), NaN. (1)
+         Как false интерпретируются значения:
+         0, null, false, undefined (void 0), '' (пустая строка), NaN. (1)
 
-        var q = <ченибудь>;
-        !!q - это то же самое,  что !(!q);
+         var q = <ченибудь>;
+         !!q - это то же самое,  что !(!q);
 
-        !q будет всегда false кроме случаев (1),
-        поэтому !!q всегда будет true кроме случаев (1).
+         !q будет всегда false кроме случаев (1),
+         поэтому !!q всегда будет true кроме случаев (1).
 
-        Конвертация в boolean.
+         Конвертация в boolean.
          */
         var bool2 = !3; //это будет False
         var bool3 = !!3; //это будет True
+        var bool4 = !0; //это будет True
+        var bool5 = !!0; //это будет False
 
-        function ifStringIsEmpty(val) {
-
+        function ifStringIsEmpty(val) {  //это самая моя первая реализация, сейчас будем упрощать
+            if (val == '') {
+                return true
+            } else {
+                return false
+            }
         }
 
+        function ifStringIsEmpty1(val) { //это моя вторая реализация
+            var empt = (val == '');
+            return empt;
+        }
+
+        function ifStringIsEmpty2(val) { //это моя третья реализация, сейчас будет магия, потому что я прочитаю многострочный комментарий выше.
+            return (val == '');
+        }
+
+        function ifStringIsEmpty3(val) {
+            return !val;
+        }
+
+        function ifNumberIsPositive(val) {
+            return val > 0;
+        }
+
+        function ifStringIsQwer(val) {
+            return val == 'qwer';
+        }
+
+        function ifArgumentIsDefined(val) {
+            return val !== void 0;
+        }
+
+        function ifArgumentIsNotZero(val) {
+            return val != 0;
+        }
+
+        function ifArgumentIsNotZero1(val) {
+            return !!val;
+        }
+
+        function ifArgumentIsNotZero2(val) {
+            return ((val > 0) || (val < 0));
+        }
+
+        
 
     </script>
 </head>
