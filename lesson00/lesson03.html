@@ -118,7 +118,57 @@
             return ((val > 0) || (val < 0));
         }
 
-        
+        function booleanCheck() {
+            //True condition
+            if (true) {
+                console.log('trueCondition');
+            }
+
+            //False is ALWAYS false. Никогда не зайдет в первый код.
+            if (false) {
+                console.log('this will never happen');
+            } else {
+                console.log('false condition');
+            }
+
+            if (5 > 2) {
+                console.log('5 is more than 2');
+            } else {
+                console.log('5 is less than 2'); // никогда не произойдет, т.к. выражение (5 > 2) всегда true.
+            }
+
+            if (-10 > -15) {
+                console.log('-10 is more than -15');
+            } else {
+                console.log('this will never happen'); // никогда не произойдет, т.к. выражение (-10 > -15) всегда true.
+            }
+
+
+            if ('Ira' == 'ira') { //сравниваем идентичность строк.
+                /*
+                 Сравнение строк происходит по сравнению кодов их букв.
+                 У заглавных букв и у строчных букв разные коды.
+                 */
+                console.log('this will never happen'); // никогда не произойдет, т.к. коды букв не совпадают (ну строки же разные епт!).
+            } else {
+                console.log('Strings a different');
+            }
+
+            if ('Ira') { //интерпретатор превратит пришедшее значение в boolean, хоть ты сдохни.
+                console.log('Is true'); // не пустая строка всегда интерпретируется как true.
+            } else {
+                console.log('this will never happen');
+            }
+        }
+
+        function numbersAreDifferent1(num1, num2) {
+            return (num1 != num2);
+
+        }
+
+        function numbersAreDifferent2(num1, num2) {
+            return !!(num1 - num2);
+        }
 
     </script>
 </head>
