@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script language="javascript">
+
+        function Orbea(condition) {
+            this.condition = condition;
+        }
+
+        Orbea.prototype.say = function() {
+            if (this.condition === 'clean') {
+                alert('Ok');
+            } else if (this.condition === 'dirty') {
+                alert('Not OK');
+            } else {
+                alert('Hi');
+            }
+        };
+
+        var a = new Orbea('any');
+        a.say();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
