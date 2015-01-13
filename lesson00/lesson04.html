@@ -15,7 +15,25 @@
 
         function shortCondition(arg) {
             //Syntax: (condition) ? (value_if_true) : (value_if_false);
+            //Sample: var q = isTrue ? true : false;
             return arg > 0 ? 'More Than Zero' : 'Not more than zero';
+        }
+
+        function switchCondition(dayOfWeek) {
+            var food;
+            switch (dayOfWeek.toLowerCase()) {
+                case 'monday':
+                    food = 'fish';
+                    console.log('MONDAY!');
+                    break;
+                case 'вторнег':
+                    food = 'макароны';
+                    console.log('ВТРОНЕГ!');
+                    break;
+                default:
+                    food = 'trava';
+                    console.log('НАРКОМАН???');
+            }
         }
 
     </script>

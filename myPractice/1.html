@@ -5,18 +5,34 @@
     <title></title>
     <script language="javascript">
 
-        function Orbea(condition) {
-            this.condition = condition;
+        function Orbea(cond) {
+//            this.condition = cond !== null ? cond : 'dirty';
+
+//            this.condition = cond ? cond : 'dirty';
+
+            this.condition = (cond || "dirty");
+
         }
 
         Orbea.prototype.say = function() {
-            if (this.condition === 'clean') {
-                alert('Ok');
-            } else if (this.condition === 'dirty') {
-                alert('Not OK');
-            } else {
-                alert('Hi');
+            switch (this.condition.toLowerCase()) { //то выражение, которое мы будем искать среди кейсов
+                case 'clean':
+                    //начиная отсюда и до break это код, который выполнится, когда case подошел.
+                    alert('Ok');
+                    break; //нужен для выхода, в противном случае он перейдет на другой case
+                case 'dirty':
+                    alert('Not OK');
+                    break;
+                default: //не обязательный раздел, выполнится, если ни один из cases не подошел. Он сюда зайдет, если нигде не встретит break.
+                    alert('Hi');
             }
+//            if (this.condition === 'clean') {
+//                alert('Ok');
+//            } else if (this.condition === 'dirty') {
+//                alert('Not OK');
+//            } else {
+//                alert('Hi');
+//            }
         };
 
         var a = new Orbea('any');
