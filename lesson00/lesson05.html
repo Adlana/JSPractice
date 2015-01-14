@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        function whileCycle() {
+            var i = 0;
+            while (i < 5) {
+                console.log('First ', i);
+                i++;
+            }
+
+            i = 0;
+            while (i++ < 5) {
+                console.log('Second ', i); //сначала сравнивает, затем ++ и выводит.
+            }
+
+            i = 0;
+            while (++i < 5) {
+                console.log('Third ', i); //сначала ++, потом сравнивает и выводит.
+            }
+        }
+
+        function doWhileCycle() {
+            var i = 0;
+            do {
+                console.log('First ', i);
+                i++;
+            } while (i < 5);
+
+            i = 0;
+            do {
+                console.log('Second ', i);
+            } while (i++ < 5);
+
+            i = 0;
+            do {
+                console.log('Third ', i);
+            } while (++i < 5);
+        }
+
+
+        function forCycle() {
+            /*
+             var i = 0 - это код, выполняемый перед входом в цикл
+             i < 5 - это условие входа в итерацию
+             i++ - это код выполняемый после итерации
+             */
+            for (var i = 0; i < 5; i++) {
+                console.log('First ' + i);
+            }
+
+            for (i = 0; i++ < 5;) {
+                console.log('Second ' + i);
+            }
+
+            for (i = 0; ++i < 5;) {
+                console.log('Third ' + i);
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
