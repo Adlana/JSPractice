@@ -61,6 +61,49 @@
             }
         }
 
+        function brainBlowCycle() {
+            var i = 0; //это инициализация может быть вынесена в for (первая часть цикла)
+            for (; ;) { //условие входа в итерацию пусто - в js оно всегда войдет,
+                if (i++ > 10) break; // break - принудительный выход из цикла
+                console.log(i);
+            }
+        }
+
+        function continueCycle() {
+            for (var i = 0; i < 10; i++) {
+                if (i < 5) continue; //принудительный выход из итерации.
+
+                console.log(i);
+            }
+
+        }
+
+        /**
+         * Выводить в консоль случайные числа от 0 до 1 до тех пор, пока случайное число не превысит переданное в параметре.
+         * @param {number} arg - это число от 0 до 1.
+         */
+        function practice(arg) {
+            var randomNumber;
+            do {
+                randomNumber = Math.random();
+                console.log(randomNumber);
+            } while (randomNumber < arg);
+        }
+
+        /**
+         * Посчитать сумму всех чисел от startNum до endNum.
+         * @param {number} startNum - первое число.
+         * @param {number} endNum - последнее число.
+         * @return {number} - сумма числе от startNum до endNum включительно.
+         */
+        function practice2(startNum, endNum) {
+            var sum = 0;
+            for(var i = startNum; i <= endNum; i++) {
+                sum = i + sum;
+            }
+            return sum;
+        }
+
     </script>
 </head>
 <body>
