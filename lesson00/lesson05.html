@@ -99,10 +99,37 @@
         function practice2(startNum, endNum) {
             var sum = 0;
             for (var i = startNum; i <= endNum; i++) {
-                sum = i + sum;
+                sum += i;
             }
             return sum;
         }
+
+        /**
+         * Посчитать сумму всех чисел от startNum до endNum.
+         * Решить задачу оптимально (подсказка - используем понятие арифметической прогрессии).
+         * @param {number} startNum - первое число.
+         * @param {number} endNum - последнее число.
+         * @return {number} - сумма числе от startNum до endNum включительно.
+         */
+        function practice2_1(startNum, endNum) {
+           var sum = (startNum +  endNum)/2*((endNum - startNum)+1);
+            return sum;
+        }
+
+        /**
+         * Имеется начальное четное число startNum. Посчитать сумму всех четных чисел от startNum до endNum.
+         * @param {number} startNum - первое четное число.
+         * @param {number} endNum - последнее четное число.
+         * @return {number} - сумма четных чисел от startNum до endNum включительно.
+         */
+        function practice3(startNum, endNum) {
+            var sum = 0;
+            for (var i = startNum; i <= endNum; i += 2) {
+                sum += i;
+            }//условие входа в итерацию: i <= endNum. Оно истинно пока итерируемое значение (i) меньше или равно endNum
+            return sum;
+        }
+
 
     </script>
 </head>
